@@ -5,6 +5,6 @@ const alphabet = Array.from({ length: 74 }, (item, index) => String.fromCharCode
 const generateId = () => {
   return Array.from({ length: 16 }, () => {
     const numeral = parseInt(crypto.randomBytes(1).toString('hex'), 16) % alphabet.length;
-    return alphabet[numberal];
+    return alphabet[numeral];
   }).join('');
 };
