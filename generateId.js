@@ -8,3 +8,10 @@ const generateId = () => {
     return alphabet[numeral];
   }).join('');
 };
+
+
+const generateIdWeb = () => {
+  return Array.from(window.crypto.getRandomValues(new Uint8Array(16))).map((num) => {
+    return alphabet[num % alphabet.length];
+  }).join('');
+}
